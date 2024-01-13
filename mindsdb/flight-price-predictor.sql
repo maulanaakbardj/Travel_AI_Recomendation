@@ -31,7 +31,7 @@ AND t.startingAirport = "SFO"
 AND t.isNonStop = 1
 AND t.destinationAirport = "BOS";
 
-SELECT CONCAT(CAST(random() * 1000000 as INT)) as requestID, m.flightDate, m.totalFare, m.totalFare_confidence FROM mindsdb.flight_price_predictor AS m
+SELECT CONCAT(CAST(random() * 1000000 as INT)) as requestID, m.flightDate, m.totalFare, m.totalFare_confidence FROM mindsdb.flight_price_predictor_a AS m
     JOIN maria_datasource.flight_prices AS t
     WHERE t.flightDate = "2022-04-21"
     AND t.startingAirport = "JFK"
