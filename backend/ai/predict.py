@@ -1,6 +1,6 @@
 from backend.env import config 
 import json
-MINDSDB_BASE_URL = "https://cloud.mindsdb.com/api"
+MINDSDB_BASE_URL = "'http://127.0.0.1:47334/api"
 
 FLIGHT_PRICE_PREDICTOR_MODEL = config("FLIGHT_PRICE_PREDICTOR_MODEL", default='flight_price_predictor')
 
