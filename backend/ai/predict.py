@@ -56,7 +56,7 @@ def predict_query(session,
         **kwargs,
         ):
     sql_query = f"""
-    SELECT CONCAT(CAST(random() * 1000000 as INT)) as requestID, m.flightDate as date, m.segmentsAirlineName as airline, m.isNonStop as nonStop, m.isBasicEconomy as basic, m.isRefundable as refundable, m.totalFare as price FROM mindsdb.{FLIGHT_PRICE_PREDICTOR_MODEL} AS m
+    SELECT CONCAT(CAST(random() * 1000000 as INT)) as requestID, m.flightDate as date, m.segmentsAirlineName as airline, m.isNonStop as nonStop, m.isBasicEconomy as basic, m.isRefundable as refundable, m.totalFare as price FROM mindsdb.mindsdb.flight_price_predictor_a AS m
     JOIN ai_travel_agent.flight_prices AS t
     WHERE t.flightDate >= "{flightDate}"
     AND t.startingAirport = "{startingAirport}"
